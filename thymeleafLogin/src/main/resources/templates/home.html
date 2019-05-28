@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Pagina Inicial</title>
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<br/>
+
+<h:form>
+
+		<ul class="navbar-dark bg-primary">
+	
+			<a class="navbar-brand"><h1>Consultar lista de funcionarios</h1></a><p></p>
+						
+		</ul>
+
+	</h:form>
+
+	<table border="3">
+		<tr>
+			<td>
+				<button>
+					<a th:href="@{/loginList}">CONSULTAR</a>
+				</button>
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

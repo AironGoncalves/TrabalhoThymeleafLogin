@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista de Funcionarios</title>
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<h:form>
+
+		<ul class="navbar-dark bg-primary">	
+			<a class="navbar-brand"><h1>Lista de funcionarios cadastrados</h1></a><p></p>						
+		</ul>
+	</h:form>
+	
+	<table border="3">
+		<tr>
+			<td><b>ID</b></td>
+			<td><b>NOME</b></td>
+			<td><b>IDADE</b></td>
+		</tr>
+		
+		<tr th:each="emp :${empList}">
+			<td th:text="${emp?.id}">id</td>
+			<td th:text="${emp?.nome}">nome</td>
+			<td th:text="${emp?.age}">idade</td>
+		</tr>
+	</table>
+
+</body>
+</html>

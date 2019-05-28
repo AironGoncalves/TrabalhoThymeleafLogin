@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Pagina</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<h:form>
+
+		<ul class="navbar-dark bg-primary">
+	
+			<a class="navbar-brand" ><h1>Acessar Sistema</h1></a><p></p>
+						
+		</ul>
+
+	</h:form>
+
+	<br/>
+	<table>
+		<tr>
+			<form th:action="@{/login}" th:object="${loginForm}" method="post">
+				<p th:if="${Invalido}" class="error">ERRO! Usuario ou senha incorreto.
+				</p>
+				<label for="username">Usuario: </label> <input type="text"
+					id="username" name="username" autofocus="autofocus" /> <label
+					for="senha">Senha: </label> <input type="password" id="password"
+					name="password" /> 
+					<br /> <br /> 
+					<input type="submit" value="ENTRAR" />
+
+			</form>
+		</tr>
+	</table>
+
+</body>
+</html>
